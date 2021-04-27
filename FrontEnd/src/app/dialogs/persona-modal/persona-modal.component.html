@@ -1,0 +1,39 @@
+<h1 mat-dialog-title> {{ persona !=null ? 'Editar Registro' : 'Nuevo Registro' }} </h1>
+
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput [(ngModel)]="nombre">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Apellido Paterno</mat-label>
+    <input matInput [(ngModel)]="apellidoPaterno">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Apellido Materno</mat-label>
+    <input matInput [(ngModel)]="apellidoMaterno">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>RFC</mat-label>
+    <input matInput [(ngModel)]="rfc">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Fecha de Nacimiento</mat-label>
+    <input matInput [(ngModel)]="fechaNacimiento">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Fecha del Registro</mat-label>
+    <input matInput [(ngModel)]="fechaRegistro">
+  </mat-form-field>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary"
+    (click)="persona != null ? editPersona() : addPersona()">Guardar</button>
+  <button mat-raised-button (click)="close()" >Cancelar</button>
+</div>
